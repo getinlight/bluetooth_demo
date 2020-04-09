@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wk9-d0-lVF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Bej-82-eVB">
+            <objects>
+                <navigationController id="Wk9-d0-lVF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q1X-f1-ZV2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ysx-xS-rWU" kind="relationship" relationship="rootViewController" id="q6s-kU-ppu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckd-Ed-ufe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442" y="41"/>
+        </scene>
+        <!--Bluetooth-->
+        <scene sceneID="QBg-41-VCT">
+            <objects>
+                <viewController id="Ysx-xS-rWU" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gyO-R8-Ea3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol7-L1-YzO">
+                                <rect key="frame" x="38" y="141" width="349" height="56"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="f78-FW-ujv"/>
+                                </constraints>
+                                <state key="normal" title="APP作为中心模式">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="central:" destination="Ysx-xS-rWU" eventType="touchUpInside" id="TyL-dw-ya1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaC-LI-hQs">
+                                <rect key="frame" x="38" y="236" width="349" height="56"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="pPq-sI-zvH"/>
+                                </constraints>
+                                <state key="normal" title="APP作为外设模式">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="peripheral:" destination="Ysx-xS-rWU" eventType="touchUpInside" id="WjI-oK-K4Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gFh-Ik-8tE" firstAttribute="trailing" secondItem="Ol7-L1-YzO" secondAttribute="trailing" constant="27" id="DPK-zi-1XY"/>
+                            <constraint firstItem="Ol7-L1-YzO" firstAttribute="top" secondItem="gFh-Ik-8tE" secondAttribute="top" constant="53" id="F9M-Uv-GIN"/>
+                            <constraint firstItem="Ol7-L1-YzO" firstAttribute="leading" secondItem="gFh-Ik-8tE" secondAttribute="leading" constant="38" id="IGf-Nw-F8h"/>
+                            <constraint firstItem="JaC-LI-hQs" firstAttribute="top" secondItem="Ol7-L1-YzO" secondAttribute="bottom" constant="39" id="PO2-tM-3te"/>
+                            <constraint firstItem="JaC-LI-hQs" firstAttribute="leading" secondItem="gFh-Ik-8tE" secondAttribute="leading" constant="38" id="hGa-L8-U5D"/>
+                            <constraint firstItem="gFh-Ik-8tE" firstAttribute="trailing" secondItem="JaC-LI-hQs" secondAttribute="trailing" constant="27" id="wkN-re-79a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gFh-Ik-8tE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bluetooth" id="abb-G6-MJQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omn-sS-cht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292.75362318840581" y="40.848214285714285"/>
+        </scene>
+    </scenes>
+</document>
